@@ -1,6 +1,6 @@
 {
     "name": "rudivdme/bearcontent",
-    "description": "Lightweight CMS as a package that runs on top of a site.",
+    "description": "Lightweight CMS as a Laravel package that runs on top of a site.",
     "authors": [
         {
             "name": "Rudi van der Merwe",

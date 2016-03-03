@@ -62,7 +62,7 @@ elixir(function(mix) {
     ], 'resources/assets/build/fonts');
 
     mix.copy('../../../bower_components/ContentTools/build/icons.woff', 'resources/assets/build/css');
-    mix.copy('../../../bower_components/ContentTools/build/images/', 'resources/assets/build/images');
+    mix.copy('../../../bower_components/ContentTools/build/images/', 'resources/assets/build/css/images');
     mix.copy('resources/assets/images/', 'resources/assets/build/images');
 
     mix.copy('../../../bower_components/font-awesome/fonts/', 'resources/assets/build/fonts');
