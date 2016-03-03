@@ -49,7 +49,7 @@
 						    </ol>
 						</div>
 
-						{{#compare linked "0"}}
+						{{#compare linked "false"}}
 							<div class="dd" data-group="1">
 								<h6>Your new page <small>(drag to your menu)</small></h6>
 					            <ol class="dd-list" id="pendingList" data-ix="1">
