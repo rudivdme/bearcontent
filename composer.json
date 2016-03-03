@@ -7,5 +7,18 @@
             "email": "rudi.vd.me@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+	    "php": ">=5.5.9",
+        "laravel/framework": "5.2.*",
+        "laravelcollective/html": "~5.0",
+        "intervention/image": "^2.3"
+	  },
+    "autoload": {
+        "psr-4": {
+            "Rudivdme\\BearContent\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    }
 }

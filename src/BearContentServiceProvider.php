@@ -19,7 +19,7 @@ class BearContentServiceProvider extends ServiceProvider
     public function boot()
     {
         if (! $this->app->routesAreCached()) {
-            require __DIR__.'/../routes.php';
+            require __DIR__.'/routes.php';
         }
 
         $this->loadTranslationsFrom( __DIR__.'/../resources/lang', 'bear');
@@ -41,6 +41,12 @@ class BearContentServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../resources/assets/build/' => public_path('vendor/bear')
         ], 'public');
+
+        /*
+        $this->publishes([
+            __DIR__.'/../resources/assets/views/' => public_path('vendor/bear')
+        ], 'public');
+        */
     }
 
     /**
