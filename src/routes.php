@@ -3,6 +3,8 @@
 	Route::group(['middleware' => 'web', 'namespace' => 'Rudivdme\BearContent\Controllers'], function() {
 
 		Route::post('bear/login', 'Api\AuthController@login');
+		Route::post('bear/password/reset', 'Api\AuthController@reset');
+		Route::post('bear/password/change', 'Api\AuthController@change');
 
 		Route::group(['prefix' => 'bear'], function() {
 

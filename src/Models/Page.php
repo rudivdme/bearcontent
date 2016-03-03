@@ -382,6 +382,8 @@ class Page extends Model
 
     public function trail()
     {
+        $return = [];
+
         if ($this->slug != 'home')
         {
             $return = collect([
