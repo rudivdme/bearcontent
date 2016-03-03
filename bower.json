@@ -1,0 +1,39 @@
+{
+  "name": "BearContent",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Rudi van der Merwe <rudi.vd.me@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dropzone": "^4.3.0",
+    "font-awesome": "^4.5.0",
+    "handlebars": "^4.0.5",
+    "jquery-form": "^3.46.0",
+    "jquery": "^2.2.0",
+    "Materialize": "materialize#^0.97.5",
+    "simple-line-icons": "^2.2.3",
+    "animate.css": "^3.5.1",
+    "cropper": "^2.2.5",
+    "riot-route": "^2.3.15",
+    "jquery-nestable": "*",
+    "bootstrap-sass": "^3.3.6",
+    "jquery-powertip-build": "^1.2.1",
+    "fancybox": "^2.1.5",
+    "sweetalert": "^1.1.3",
+    "tooltipster": "^3.3.0"
+  }
+}

@@ -1,0 +1,68 @@
+.btn-floating.btn-large {
+	> .fa {
+		font-size: 32px;
+	}
+	.three-quarters-loader {
+		margin-top: 20px;
+	}
+}
+.bear-editing {
+	display: none;
+	&.active {
+		display: inline-block;
+	}
+}
+.bear-page-tool {
+	position: fixed;
+	right: 16px;
+	z-index: 11000;
+
+	&.first {
+		top: 80px;
+	}
+
+	&.second {
+		top: 150px;
+	}
+
+	&.third {
+		top: 220px;
+	}
+
+	&.bottom {
+		bottom: 20px;
+	}
+
+	.btn
+	{
+		.fa {
+			-webkit-transition-duration: 0.1s;
+		    -moz-transition-duration: 0.1s;
+		    transition-duration: 0.1s;
+		    -webkit-transition-timing-function: ease-in;
+		    -moz-transition-timing-function: ease-in;
+		    transition-timing-function: ease-in;
+		}
+
+		&:hover {
+
+			.fa {
+				-webkit-transform: rotate(-15deg);
+			    -moz-transform: rotate(-15deg);
+			    -ms-transform: rotate(-15deg);
+			    -o-transform: rotate(-15deg);
+			    transform: rotate(-15deg);
+			}
+		}
+
+		&.spin:hover {
+			.fa {
+				-webkit-transform: rotate(-90deg);
+			    -moz-transform: rotate(-90deg);
+			    -ms-transform: rotate(-90deg);
+			    -o-transform: rotate(-90deg);
+			    transform: rotate(-90deg);
+			}
+		}
+	}
+}

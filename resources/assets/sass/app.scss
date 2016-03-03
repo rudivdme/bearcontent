@@ -1,0 +1,47 @@
+$themeBlue: 	#03a9f4;
+$themeBlueDark: #0078aa;
+$themeRed: 		#F44336;
+$themePink: 	#f71169;
+$themeRed: 		#f44336;
+
+#bear-container
+{
+	@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+	@import "_materialize";
+	@import "_public";
+	@import "_overlay";
+	@import "_form";
+	@import "_helpers";
+	@import "_sidebar";
+	@import "_components";
+	@import "_editor";
+}
+
+@import "_plugins";
+
+body.has-bear {
+	margin-left: 86px;
+}
+
+body.has-bear-overlay {
+	overflow: hidden !important;
+}
+
+.ct-widget.ct-ignition {
+	display: none;
+}
+
+.ct-widget.ct-inspector {
+	z-index: 30000;
+	background: $themeBlue;
+}
+
+.ct-tool {
+	&--heading1:before        { content: "H1"; font-weight: normal; font-family: Arial, sans-serif; font-size: 14px; }
+}
+.ct-tool {
+	&--heading2:before        { content: "H2"; font-weight: normal; font-family: Arial, sans-serif; font-size: 14px; }
+}
+.ct-tool {
+	&--heading3:before        { content: "H3"; font-weight: normal; font-family: Arial, sans-serif; font-size: 14px; }
+}

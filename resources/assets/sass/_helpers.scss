@@ -1,0 +1,158 @@
+.opas1 {
+	opacity: 1;
+}
+
+.opas0 {
+	opacity: 0;
+}
+
+.p20 {
+	padding: 20px;
+}
+
+.ml8 {
+	margin-left: 8px;
+}
+
+.mr8 {
+	margin-right: 8px;
+}
+
+.mb8 {
+	margin-bottom: 8px;
+}
+.mt8 {
+	margin-top: 8px;
+}
+.mt0 {
+	margin-top: 0 !important;
+}
+.mb0 {
+	margin-bottom: 0 !important;
+}
+.mtb0 {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+.p-b20 {
+	padding-bottom: 20px;
+}
+
+.p10 {
+	padding: 10px;
+}
+
+.p5 {
+	padding: 5px;
+}
+
+.ptb7 {
+	padding: 7px 0;
+}
+
+
+.m20 {
+	margin: 20px;
+}
+
+.m10 {
+	margin: 10px;
+}
+
+.w100 { width: 100px !important; }
+.w150 { width: 150px !important; }
+.w200 { width: 200px !important; }
+.w210 { width: 210px !important; }
+.w250 { width: 250px !important; }
+.w300 { width: 300px !important; }
+.w340 { width: 340px !important; }
+.w350 { width: 350px !important; }
+.w400 { width: 400px !important; }
+.w450 { width: 450px !important; }
+
+.max1200 { max-width: 1200px; margin: 0 auto; }
+.max1100 { max-width: 1100px; margin: 0 auto; }
+.max1000 { max-width: 1000px; margin: 0 auto; }
+.max900 { max-width: 900px; margin: 0 auto; }
+.max800 { max-width: 800px; margin: 0 auto; }
+.max700 { max-width: px; margin: 0 auto; }
+.max600 { max-width: 600px; margin: 0 auto; }
+.max500 { max-width: 500px; margin: 0 auto; }
+.max450 { max-width: 450px; margin: 0 auto; }
+.max400 { max-width: 400px; margin: 0 auto; }
+
+.h350 {
+	height: 350px;
+	@media (max-width: 768px) {
+		height: auto;
+	}
+}
+
+.h400 {
+	height: 400px;
+}
+
+.h500 {
+	height: 500px;
+}
+
+.h550 {
+	height: 550px;
+}
+
+@media (max-width: 1270px) {
+	.h350,
+	.h400,
+	.h500,
+	.h550 {
+		height: auto;
+	}
+}
+
+.noP {
+	padding: 0 !important;
+	@media (max-width: 780px) {
+		padding: 15px !important;
+	}
+}
+
+.noM {
+	margin: 0;
+}
+
+.m-5-0 {
+	margin: 5px 0;
+}
+.clearfix
+{
+	clear: both;
+}
+.closed {
+	display: none;
+}
+.font-90 {
+	font-size: 90% !important;
+}
+.font-70 {
+	font-size: 70% !important;
+}
+.font-50 {
+	font-size: 50% !important;
+}
+.font-20px
+{
+	font-size: 20px !important;
+}
+.font-30px
+{
+	font-size: 30px !important;
+}
+.right-align {
+	text-align: right !important;
+}
+.center-align {
+	text-align: center !important;
+}
+.left-align {
+	text-align: left !important;
+}
