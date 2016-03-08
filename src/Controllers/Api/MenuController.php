@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 use Rudivdme\BearContent\Models\Page;
 use Rudivdme\BearContent\Models\Menu;
 use App\Http\Requests;
-use Rudivdme\BearContent\Controllers\BearController;
+use Rudivdme\BearContent\Controllers\ApiController;
 use Rudivdme\BearContent\Transformers\MenuTransformer;
 
-class MenuController extends BearController
+class MenuController extends ApiController
 {
     /**
      * Return JSON data for the listing of the resource.

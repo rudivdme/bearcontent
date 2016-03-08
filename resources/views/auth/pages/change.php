@@ -2,7 +2,7 @@
 	<div class="animated bear-content max450">
 		<div class="clearfix"></div>
 		<hr class="spacer" />
-		<h1 class="center-align"><span id="bear-speak" class="tooltip c-white" title="It's a good day." data-position="right"><?php echo trans('bear::speak.okay') ?></span></h1>
+		<h1 class="center-align"><span id="bear-speak" class="ba-tooltip c-white" title="It's a good day." data-position="right"><?php echo trans('bear::speak.okay') ?></span></h1>
 		<p class="center-align">Enter the code we sent you by email, and then enter your desired password.</p>
 		<?php echo Form::open(['url' => url('bear/password/change'), 'class' => 'ba-single-column', 'data-done-route' => "/signin"]); ?>
 			<div class="ba-field">

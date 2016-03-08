@@ -14,7 +14,7 @@ class PageTransformer extends Transformer {
 			'slug'    => $item->slug,
 			'layout'  => $item->layout,
 			'private' => $item->private,
-			'created' => strtolower($item->created_at->format("M j, Y")),
+			'created' => $item->created_at ? strtolower($item->created_at->format("M j, Y")) : null,
 			'status'  => $item->status,
 		];
 
@@ -31,7 +31,7 @@ class PageTransformer extends Transformer {
 			'private'         => $item->private ? "true":"false",
 			'editable_layout' => $item->editable_layout ? "true":"false",
 			'linked'          => $item->linked ? "true":"false",
-			'created'         => strtolower($item->created_at->format("M j, Y")),
+			'created'         => $item->created_at ? strtolower($item->created_at->format("M j, Y")) : null,
 			'status'          => $item->status,
 		];
 

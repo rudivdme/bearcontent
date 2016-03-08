@@ -42,11 +42,10 @@ class BearContentServiceProvider extends ServiceProvider
             __DIR__.'/../resources/assets/build/' => public_path('vendor/bear')
         ], 'public');
 
-        /*
-        $this->publishes([
-            __DIR__.'/../resources/assets/views/' => public_path('vendor/bear')
-        ], 'public');
-        */
+       $this->publishes([
+            __DIR__.'/../resources/views/admin/map.blade.php' => base_path('resources/views/vendor/bear/admin/map.blade.php'),
+            __DIR__.'/../resources/views/admin/pages/info.php' => base_path('resources/views/vendor/bear/admin/pages/info.php'),
+        ], 'views');
     }
 
     /**

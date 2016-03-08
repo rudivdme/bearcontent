@@ -8,7 +8,7 @@
 {{#with record}}
 	<div class="ba-controls">
 		{{> baControls}}
-		<button data-ba-route="pages" class="btn-floating btn-medium default pull-right ml8 tooltip" title="Go back"><i class="fa fa-arrow-left"></i></button>
+		<button data-ba-route="pages" class="btn-floating btn-medium default pull-right ml8 ba-tooltip" title="Go back"><i class="fa fa-arrow-left"></i></button>
 	</div>
 
 	<div data-store="beardata.pages.show.{{id}}" data-load-store="<?php echo url('bear/pages/{{id}}') ?>">

@@ -191,14 +191,18 @@
 		}
 	}
 
-	.collapse-toggle {
-		height: 24px;
-    	line-height: 24px;
-    	padding: 0 10px !important;
+	.dd {
 
-		i {
-			font-size: 12px;
-			line-height: 12px;
-			margin:0;
+		.dd-control {
+			height: 24px;
+	    	line-height: 24px;
+	    	padding: 0 10px !important;
+	    	margin: 7px !important;
+
+			i {
+				font-size: 12px;
+				line-height: 12px;
+				margin:0;
+			}
 		}
 	}

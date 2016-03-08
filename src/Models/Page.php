@@ -4,6 +4,7 @@ namespace Rudivdme\BearContent\Models;
 
 use Rudivdme\BearContent\Models\Model;
 use Rudivdme\BearContent\BearContent;
+use Rudivdme\BearContent\Transformers\MenuTransformer;
 
 class Page extends Model
 {
@@ -160,27 +161,6 @@ class Page extends Model
             'menu' => (new MenuTransformer)->transformMenu(
                 (new Menu)->getMenu(request()->user())
             )
-        ]);
-    }
-
-    public function shareSlides()
-    {
-        view()->share([
-            'slides' => (new Slide)->getActive()
-        ]);
-    }
-
-    public function shareRecentSermons()
-    {
-        view()->share([
-            'recent_sermons' => (new Sermon)->getRecent(5)
-        ]);
-    }
-
-    public function shareUpcomingEvents()
-    {
-        view()->share([
-            'upcoming_events' => (new Event)->getRecent(5)
         ]);
     }
 

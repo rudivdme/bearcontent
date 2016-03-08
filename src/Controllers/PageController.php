@@ -4,8 +4,9 @@ namespace Rudivdme\BearContent\Controllers;
 
 use Illuminate\Http\Request;
 use Rudivdme\BearContent\Models\Page;
+use Illuminate\Routing\Controller;
 
-class PageController extends BearController
+class PageController extends Controller
 {
     public function resolve($slug='home')
     {
@@ -13,6 +14,8 @@ class PageController extends BearController
 
     	if ($page && $file = snake_case($page->slug))
     	{
+            $page->shareMenu();
+
             if (view()->exists("pages.$file"))
             {
                 return view("pages.$file")->with('page', $page);

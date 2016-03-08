@@ -9,10 +9,10 @@ use Rudivdme\BearContent\Models\PageSection;
 use Rudivdme\BearContent\Models\PageWidget;
 use Rudivdme\BearContent\Models\Image as Image;
 use App\Http\Requests;
-use Rudivdme\BearContent\Controllers\BearController;
+use Rudivdme\BearContent\Controllers\ApiController;
 use Rudivdme\BearContent\Transformers\PageTransformer;
 
-class SaveController extends BearController
+class SaveController extends ApiController
 {
 
     /**

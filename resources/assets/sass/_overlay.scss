@@ -98,24 +98,6 @@
 		}
 	}
 
-	.close-and-exit {
-		display: inline-block;
-	}
-
-	.close-and-refresh {
-		display: none;
-	}
-
-	&.bear-needs-refresh
-	{
-		.close-and-exit {
-			display: none;
-		}
-		.close-and-refresh {
-			display: inline-block;
-		}
-	}
-
 	.page-heading {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -177,5 +159,31 @@
 	.ba-pagination > li.disabled > span {
 		background: rgba(80, 80, 80, 0.8);
 		color: #656565;
+	}
+
+	.modal {
+		background: rgb(100, 100, 100) !important;
+
+		.modal-footer {
+			background: rgb(100, 100, 100) !important;
+		}
+	}
+}
+
+.close-and-exit {
+	display: inline-block;
+}
+
+.close-and-refresh {
+	display: none;
+}
+
+&.bear-needs-refresh
+{
+	.close-and-exit {
+		display: none;
+	}
+	.close-and-refresh {
+		display: inline-block;
 	}
 }

@@ -7,7 +7,7 @@
 
 	<div class="ba-controls">
 		{{> baControls}}
-		<button data-ba-route="pages/create" class="btn-floating btn-medium teal pull-right ml8 tooltip waves-effect" title="Create Page" data-position="bottom"><i class="fa fa-pencil"></i></button>
+		<button data-ba-route="pages/create" class="btn-floating btn-medium teal pull-right ml8 ba-tooltip waves-effect" title="Create Page" data-position="bottom"><i class="fa fa-pencil"></i></button>
 	</div>
 
 	<div data-store="beardata.pages.list">
@@ -66,14 +66,14 @@
 								</td>
 								<td class="center-align">{{created}}</td>
 								<td class="right-align">
-									<a href="<?php echo url('/') ?>/{{slug}}" class="btn default btn-icon-sm tooltip" title="View/Update Content" data-position="top"><i class="fa fa-pencil"></i></a>
-									<a href="/pages/{{id}}/update" data-ba-route class="btn default btn-icon-sm tooltip" title="Configure page" data-position="top"><i class="fa fa-wrench"></i></a>
+									<a href="<?php echo url('/') ?>/{{slug}}" class="btn default btn-icon-sm ba-tooltip" title="View/Update Content" data-position="top"><i class="fa fa-pencil"></i></a>
+									<a href="/pages/{{id}}/update" data-ba-route class="btn default btn-icon-sm ba-tooltip" title="Configure page" data-position="top"><i class="fa fa-wrench"></i></a>
 									{{#compare status 'draft'}}
-										<a href="#" data-post-url="<?php echo url('bear/pages/{{id}}/delete') ?>" data-no-go="{{slug}}" class="btn default btn-icon-sm tooltip " data-encourage-refresh title="Delete page" data-position="top"><i class="fa fa-trash"></i></a>
-										<a href="#" data-post-url="<?php echo url('bear/pages/{{id}}/publish') ?>" class="btn pink btn-icon-sm tooltip " data-encourage-refresh title="Publish online!" data-position="top"><i class="fa fa-thumbs-up"></i></a>
+										<a href="#" data-post-url="<?php echo url('bear/pages/{{id}}/delete') ?>" data-no-go="{{slug}}" class="btn default btn-icon-sm ba-tooltip " data-encourage-refresh title="Delete page" data-position="top"><i class="fa fa-trash"></i></a>
+										<a href="#" data-post-url="<?php echo url('bear/pages/{{id}}/publish') ?>" class="btn pink btn-icon-sm ba-tooltip " data-encourage-refresh title="Publish online!" data-position="top"><i class="fa fa-thumbs-up"></i></a>
 									{{/compare}}
 									{{#compare status 'published'}}
-										<a href="#" data-post-url="<?php echo url('bear/pages/{{id}}/unpublish') ?>" class="btn default btn-icon-sm tooltip" data-encourage-refresh title="Unpublish this page" data-position="top"><i class="fa fa-thumbs-down"></i></a>
+										<a href="#" data-post-url="<?php echo url('bear/pages/{{id}}/unpublish') ?>" class="btn default btn-icon-sm ba-tooltip" data-encourage-refresh title="Unpublish this page" data-position="top"><i class="fa fa-thumbs-down"></i></a>
 									{{/compare}}
 								</td>
 							</tr>

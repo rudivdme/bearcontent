@@ -4,7 +4,12 @@
 	{
 
 		Handlebars.registerPartial('baControls', '<button class="btn-floating btn-medium default pull-right close-and-exit ml8 tooltip waves-effect" title="I\'m done here." data-position="bottom"><i class="fa fa-close"></i></button><button class="btn-floating btn-medium pink pull-right close-and-refresh ml8 tooltip  waves-effect" title="Close & Refresh!" data-position="bottom"><i class="fa fa-refresh"></i></button>');
-		
+
+		if ($("#menu-item-form-template").length > 0)
+		{
+			Handlebars.registerPartial("menuItemForm", $("#menu-item-form-template").html());
+		}
+
 		if ($("#pagination-template").length > 0)
 		{
 			Handlebars.registerPartial("paginator", $("#pagination-template").html());

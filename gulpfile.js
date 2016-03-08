@@ -52,6 +52,7 @@ elixir(function(mix) {
         '../scripts/ba.ui.controls.js',
         '../scripts/ba.ui.controls.dropdown.js',
         '../scripts/ba.ui.controls.sorting.js',
+        '../scripts/ba.ui.controls.menu.js',
         '../scripts/ba.ui.editor.js',
         '../scripts/ba.helpers.js',
     ], 'resources/assets/build/js/bear.js');

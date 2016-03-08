@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 use Rudivdme\BearContent\Models\User;
 use App\Http\Requests;
-use Rudivdme\BearContent\Controllers\BearController;
+use Rudivdme\BearContent\Controllers\ApiController;
 use Auth;
 
-class AuthController extends BearController
+class AuthController extends ApiController
 {
     /**
      * Log a new user in.

@@ -163,6 +163,11 @@
 
                     route(path);
                 }
+
+                if (typeof elem != 'undefined' && typeof elem.attr('data-encourage-refresh') != 'undefined')
+                {
+                    self.element().addClass('bear-needs-refresh');
+                }
             }
             else
             {
@@ -232,7 +237,7 @@
 
                 if (typeof form != 'undefined' && typeof form.attr('data-encourage-refresh') != 'undefined')
                 {
-                    $('body').addClass('bear-needs-refresh');
+                    self.element().addClass('bear-needs-refresh');
                 }
             }
             else

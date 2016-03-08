@@ -25,21 +25,25 @@ class BearKickoffSeeder extends Seeder
         \DB::table('pages')->insert([
             'id'              => 1,
             'title'           => 'Home',
-            'slug'            => '/',
-            'layout'          => 'homepage',
+            'slug'            => 'home',
+            'layout'          => 'home',
             'entity'          => 'home',
-            'scope'           => 'public',
+            'private'         => 'false',
             'linked'          => true,
             'static_layout'   => true,
             'status'          => 'published',
+            'created_at'      => new \DateTime,
+            'updated_at'      => new \DateTime,
         ]);
 
         \DB::table('menus')->insert([
-            'id'      => 1,
-            'title'   => 'Home',
-            'page_id' => 1,
-            'sort'    => 1,
-            'active'  => 1,
+            'id'         => 1,
+            'title'      => 'Home',
+            'page_id'    => 1,
+            'sort'       => 1,
+            'active'     => 1,
+            'created_at' => new \DateTime,
+            'updated_at' => new \DateTime,
         ]);
     }
 }

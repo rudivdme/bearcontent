@@ -13,12 +13,12 @@ class CreatePagesTable extends Migration
     public function up()
     {
         Schema::create('pages', function (Blueprint $table) {
-            $table->increments('id');
+           $table->increments('id');
             $table->string('title');
             $table->string('slug');
             $table->string('layout', 30)->nullable();
             $table->string('entity', 30)->nullable();
-            $table->string('scope', 10)->nullable();
+            $table->boolean('private');
             $table->text('content')->nullable();
             $table->text('description')->nullable();
             $table->string('status');

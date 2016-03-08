@@ -2,7 +2,7 @@
 	<div class="container bear-content animated max450">
 		<div class="clearfix"></div>
 		<hr class="spacer" />
-		<h1 class="center-align"><span id="bear-speak" class="tooltip c-white" title="It's a good day." data-position="right"><?php echo trans('bear::speak.hello') ?></span></h1>
+		<h1 class="center-align"><span id="bear-speak" class="ba-tooltip c-white" title="It's a good day." data-position="right"><?php echo trans('bear::speak.hello') ?></span></h1>
 		<p class="center-align">Please enter your username and password to sign in.</p>
 		<?php echo Form::open(['url' => url('bear/login'), 'class' => 'ba-single-column']); ?>
 			<div class="ba-field">

@@ -40,7 +40,7 @@
 
     BearContent.UI.appendControl(function(parent) {
 
-        parent.find('.tooltip').each(function() {
+        parent.find('.ba-tooltip').each(function() {
             var elem = $(this);
             if (!elem.hasClass('tooltipstered'))
             {
@@ -201,27 +201,6 @@
 
     BearContent.UI.appendControl(function(parent) {
 
-        parent.find('.dd').each(function() {
-            var list = $(this);
-            var group = list.attr('data-group');
-            list.nestable({
-                maxDepth: 2,
-                group: group,
-                expandBtnHTML: '<button data-action="expand" type="button" class="btn default collapse-toggle"><i class="fa fa-plus"></i></button>',
-                collapseBtnHTML: '<button data-action="collapse" type="button" class="btn default collapse-toggle"><i class="fa fa-minus"></i></button>',
-            });
-            list.nestable('collapseAll');
-            $(list.attr('data-target')).val(JSON.stringify(list.nestable('serialize')));
-        });
-
-        parent.find('.dd').on('change', function() {
-            var list = $(this);
-            $(list.attr('data-target')).val(JSON.stringify(list.nestable('serialize')));
-        });
-    });
-
-    BearContent.UI.appendControl(function(parent) {
-
         parent.find("[data-post-url]").off('click').on('click', function(e) {
             e.preventDefault();
             BearContent.Api.post($(this).attr('data-post-url'), {_token:BearContent.token}, parent.showResponse, $(this));
@@ -232,6 +211,17 @@
     BearContent.UI.appendControl(function(parent) {
 
         parent.find('.dropdown-button').dropdown();
+
+    });
+
+    BearContent.UI.appendControl(function(parent) {
+
+        parent.find('[show-modal]').leanModal({
+            dismissible: true,
+            opacity: .5,
+            in_duration: 300,
+            out_duration: 200,
+        });
 
     });
 

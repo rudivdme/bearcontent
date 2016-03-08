@@ -1,4 +1,7 @@
 <script data-route-id="info" data-route-title="<?php echo ba_title('About')  ?>" type="text/x-handlebars-template">
+	<div class="ba-controls">
+		{{> baControls}}
+	</div>
 	<div class="bear-content animated max450 center-align">
 		<div class="clearfix"></div>
 		<div class="bear-info">
