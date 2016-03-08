@@ -35,7 +35,7 @@
 								            <ol class="dd-list">
 								            	{{#each children}}
 									                <li class="dd-item" data-list="#menuList" data-id="{{id}}" data-page-id="{{page_id}}" data-title="{{title}}" data-url="{{url}}" data-active="{{active}}">
-									                	<button type="button" class="btn default pull-right" show-modal data-target="FormMenu{{id}}"><i class="fa fa-pencil"></i></button>
+									                	<button type="button" class="btn default pull-right dd-control" show-modal data-target="FormMenu{{id}}"><i class="fa fa-pencil"></i></button>
 									                    <div class="dd-handle">
 									                    	<div class="dd-title"><span data-field-{{id}}-title>{{title}}</span>
 									                    		{{#compare active '0'}}<small>(not active)</small>{{/compare}}
