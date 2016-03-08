@@ -68,7 +68,6 @@
 
 						<div class="clearfix"></div>
 						<hr class="spacer" />
-						<button data-ba-route="menu" class="btn default"><i class="fa fa-arrow-left mr8"></i> Go Back</button>
 						<button type="submit" class="btn blue pull-right" data-color="teal">Save Changes</button>
 						<?php echo Form::close(); ?>
 					{{else}}
