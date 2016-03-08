@@ -21,7 +21,7 @@ class MenuController extends ApiController
     {
         return (new MenuTransformer)->transformMenu( 
             (new Menu)->with('page')->orderBy('sort', 'asc')->get(),
-            (new Page)->where('linked', '=', false)->whereNotIn('entity', ['sermon', 'event'])->orderBy('title', 'asc')->get()
+            (new Page)->where('linked', '=', false)->orderBy('title', 'asc')->get()
         );
     }
 
