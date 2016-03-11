@@ -28,6 +28,7 @@ class PageTransformer extends Transformer {
 			'title'           => $item->title,
 			'slug'            => $item->slug,
 			'layout'          => $item->layout,
+			'entity'          => $item->entity,
 			'private'         => $item->private ? "true":"false",
 			'editable_layout' => $item->editable_layout ? "true":"false",
 			'linked'          => $item->linked ? "true":"false",

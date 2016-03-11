@@ -31,7 +31,21 @@
 							</div>
 						</div>
 						<div class="ba-field">
-							<div class="ba-form-group" data-field-name="private">
+							<div class="ba-form-group" data-field-name="entity">
+								<label>Entity</label>
+								<div class="ba-dropdown mr8 mb8 w300">
+			                        <input name="entity" type="hidden" >
+			                        <button class="dropdown-button w100p" data-activates="page-entity"><span data-display>Select Entity</span><i class="fa fa-caret-down"></i></button>
+			                     	<ul id='page-entity' class='dropdown-content'>
+			                     		<?php foreach (config('bear.page_entities') as $entity => $title) { ?>
+			                     			<li><a href="#" data-value="<?php echo $entity ?>"><?php echo str_singular($title) ?></a></li>
+			                     		<?php } ?>
+			                        </ul>
+			                    </div>
+							</div>
+						</div>
+						<div class="ba-field">
+							<div class="ba-form-group w300" data-field-name="private">
 								<label>Page availability</label>
 								<div class="switch ba-switch-field">
 									<label>

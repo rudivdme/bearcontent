@@ -330,35 +330,8 @@
 
     showNotification: function(type, message, callback) {
         var self = this;
-        var html = "<span class='bear-notify'>";
 
-        /*
-        if (type == 'success')
-        {
-            html += "<i class='icon-like'></i>";
-        }
-
-        if (type == 'error')
-        {
-            html += "<i class='icon-question'></i>";
-        }
-        */
-
-        html += message + "</span>";
-
-        if (typeof callback == 'function')
-        {
-            callback();
-        }
-
-        $('#bear-speak').data('title', $('#bear-speak').attr('title')).tooltipster('content', html).tooltipster('show', function() {
-            clearTimeout(self.notifyTimer);
-            self.notifyTimer = setTimeout(function() {
-                $('#bear-speak').tooltipster('hide', function() {
-                    $('#bear-speak').tooltipster('content', $('#bear-speak').attr('title'));
-                });
-            }, 10000);
-        });
+        BearContent.toast(message, 10000, type)
     },
 
   };

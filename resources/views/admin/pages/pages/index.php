@@ -35,8 +35,9 @@
 	                        <input name="filters[entity]" type="hidden" class="filter" data-auto-submit value="{{entity}}" >
 	                        <button class="dropdown-button" data-activates="page-entity-filter"><span data-display>Filter by Type</span><i class="fa fa-caret-down"></i></button>
 	                     	<ul id='page-entity-filter' class='dropdown-content'>
-	                     		<li><a href="#" data-value="content">Content Pages</a></li>
-	                     		<li><a href="#" data-value="special">Special Pages</a></li>
+	                     		<?php foreach (config('bear.page_entities') as $entity => $title) { ?>
+	                     			<li><a href="#" data-value="<?php echo $entity ?>"><?php echo $title ?></a></li>
+	                     		<?php } ?>
 	                     		<li><a href="#" data-value="all">All Pages</a></li>
 	                        </ul>
 	                    </div>

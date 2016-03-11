@@ -201,7 +201,7 @@
     }
   }
 
-  .dd { position: relative; display: block; margin: 0; padding: 0 10px; max-width: 350px; list-style: none !important; font-size: 13px; line-height: 20px; }
+  .dd { position: relative; display: block; margin: 0; padding: 0 10px; list-style: none !important; font-size: 13px; line-height: 20px; }
 
   .dd-list { display: block; position: relative; margin: 0; padding: 0; list-style: none !important; color: $themeBlue; }
   .dd-list .dd-list { padding-left: 30px; }
@@ -325,3 +325,42 @@
 
   .dd-hover > .dd-handle { background: #2ea8e5 !important; }
   
+  #bear-toast-container {
+    display:block;
+    position: fixed;
+    z-index: 30000;
+
+    @media #{$small-and-down} {
+      min-width: 100%;
+      bottom: 0%;
+    }
+    @media #{$medium-only} {
+      left: 5%;
+      bottom: 7%;
+      max-width: 90%;
+    }
+    @media #{$large-and-up} {
+      top: 10%;
+      right: 7%;
+      max-width: 86%;
+    }
+
+    .toast {
+      background-color: $themePink;
+      color: #fff;
+      font-family: 'Courier', monospace;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 300;
+      padding: 5px 20px;
+      border-radius: 5px;
+
+      &.success {
+        background-color: $themePink;
+      }
+
+      &.error {
+        background-color: $themePink;
+      }
+    }
+  }

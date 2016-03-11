@@ -48,11 +48,13 @@ class MenuTransformer extends Transformer {
 	{
 		$slug = "";
 		$url = "";
+		$layout = "";
 
 		if ($item->page)
 		{
 			$slug = $item->page->slug;
 			$url = url($slug);
+			$layout = $item->page->layout;
 		}
 		else
 		{
@@ -65,14 +67,16 @@ class MenuTransformer extends Transformer {
 		}
 
 		return [
-			'id'       => $item->id,
-			'title'    => $item->title,
-			'page_id'  => $item->page_id,
-			'url'      => $item->url,
-			'active'   => $item->active,
-			'slug'     => $slug,
-			'http'     => $url,
-			'children' => $item->children,
+			'id'          => $item->id,
+			'title'       => $item->title,
+			'page_id'     => $item->page_id,
+			'url'         => $item->url,
+			'active'      => $item->active,
+			'slug'        => $slug,
+			'http'        => $url,
+			'page_layout' => $layout,
+			'current'     => request()->url() == $url ? '1' : '0',
+			'children'    => $item->children,
 		];
 	}
 

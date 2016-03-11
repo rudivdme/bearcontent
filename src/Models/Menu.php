@@ -165,6 +165,8 @@ class Menu extends Model
                         $page_ids[] = $child->page_id;
                     }
                 }
+
+                $this->saveChildren($item, $child, $ids, $page_ids);
             }
         }
     }

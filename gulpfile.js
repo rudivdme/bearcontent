@@ -42,7 +42,6 @@ elixir(function(mix) {
         '../../../bower_components/sweetalert/dist/sweetalert.min.js',
         '../../../bower_components/fancybox/source/jquery.fancybox.js',
         '../../../bower_components/fancybox/source/helpers/jquery.fancybox-media.js',
-        '../scripts/ba.vendor.js',
         '../scripts/ba.functions.js',
         '../scripts/ba.app.js',
         '../scripts/ba.api.js',
@@ -55,6 +54,7 @@ elixir(function(mix) {
         '../scripts/ba.ui.controls.menu.js',
         '../scripts/ba.ui.editor.js',
         '../scripts/ba.helpers.js',
+        '../scripts/ba.vendor.js',
     ], 'resources/assets/build/js/bear.js');
 
     mix.copy([

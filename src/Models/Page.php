@@ -373,7 +373,7 @@ class Page extends Model
 
         $menu = (new Menu)->with('parent', 'parent.page')->where('page_id', '=', $this->id)->first();
 
-        if ($menu && $menu->parent)
+        if ($menu && $menu->parent && $menu->parent->page)
         {
             $return = $return->merge($menu->parent->page->trail());
         }

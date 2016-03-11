@@ -1,8 +1,13 @@
 $themeBlue: 	#03a9f4;
 $themeBlueDark: #0078aa;
-$themeRed: 		#F44336;
 $themePink: 	#f71169;
 $themeRed: 		#f44336;
+
+@import "bower_components/Materialize/sass/components/mixins";
+@import "bower_components/Materialize/sass/components/color";
+
+// Variables;
+@import "bower_components/Materialize/sass/components/variables";
 
 #bear-container
 {

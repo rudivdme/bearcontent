@@ -228,6 +228,7 @@
                 new ContentTools.Style('Button Primary', 'btn-primary', ['a', 'p']),
                 new ContentTools.Style('Button Large', 'btn-lg', ['a', 'p']),
                 new ContentTools.Style('Margin Top', 'margin-top', ['a', 'p']),
+                new ContentTools.Style('Divider', 'divider', ['p']),
             ]);
             ContentTools.IMAGE_UPLOADER = BearContent.UI.imageUploader;
             parent.editor = ContentTools.EditorApp.get();

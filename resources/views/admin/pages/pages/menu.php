@@ -25,26 +25,7 @@
 							<h6>Your Menu</h6>
 						    <ol class="dd-list">
 						    	{{#each ../menu}}
-							        <li class="dd-item {{#compare ../id '==' page_id}}active{{/compare}}" data-id="{{id}}" data-page-id="{{page_id}}" data-title="{{title}}" data-url="{{url}}" data-active="{{active}}">
-							            <div class="dd-handle">
-							            	<div class="dd-title"><span data-field-{{id}}-title>{{title}}</span> 
-							            		{{#compare active '0'}}<small>(not active)</small>{{/compare}}
-							            	</div>
-							            </div>
-							            {{#if children}}
-								            <ol class="dd-list">
-								            	{{#each children}}
-									                <li class="dd-item {{#compare ../../id '==' page_id}}active{{/compare}}" data-id="{{id}}" data-page-id="{{page_id}}" data-title="{{title}}" data-url="{{url}}" data-active="{{active}}">
-									                    <div class="dd-handle">
-									                    	<div class="dd-title"><span data-field-{{id}}-title>{{title}}</span>
-									                    		{{#compare active '0'}}<small>(not active)</small>{{/compare}}
-									                    	</div>
-									                    </div>
-									                </li>
-									            {{/each}}
-								            </ol>
-								        {{/if}}
-							        </li>
+							        {{> menuItem}}
 							    {{/each}}
 						    </ol>
 						</div>

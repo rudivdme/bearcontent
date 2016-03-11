@@ -210,18 +210,18 @@
 
     BearContent.UI.appendControl(function(parent) {
 
-        parent.find('.dropdown-button').dropdown();
-
-    });
-
-    BearContent.UI.appendControl(function(parent) {
-
         parent.find('[show-modal]').leanModal({
             dismissible: true,
             opacity: .5,
             in_duration: 300,
             out_duration: 200,
         });
+
+    });
+
+    BearContent.UI.appendControl(function(parent) {
+
+        parent.find('.datepicker').pickadate();
 
     });
 

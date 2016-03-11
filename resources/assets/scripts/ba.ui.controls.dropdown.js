@@ -2,6 +2,12 @@
 
     BearContent.UI.appendControl(function(parent) {
 
+        parent.find('.dropdown-button').dropdown({inDuration:50, outDuration:50});
+
+    });
+
+    BearContent.UI.appendControl(function(parent) {
+
         parent.find('.ba-dropdown a').off('click').on('click', function(e) {
             e.preventDefault();
 
@@ -24,6 +30,9 @@
                 input.val(elem.data('value')).trigger('change');
             }
         });
+    });
+
+    BearContent.UI.appendControl(function(parent) {
 
         parent.find('.ba-dropdown').each(function() {
             var container = $(this);

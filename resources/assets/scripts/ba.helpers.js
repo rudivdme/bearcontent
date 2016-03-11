@@ -10,6 +10,11 @@
 			Handlebars.registerPartial("menuItemForm", $("#menu-item-form-template").html());
 		}
 
+		if ($("#menu-item-template").length > 0)
+		{
+			Handlebars.registerPartial("menuItem", $("#menu-item-template").html());
+		}
+
 		if ($("#pagination-template").length > 0)
 		{
 			Handlebars.registerPartial("paginator", $("#pagination-template").html());

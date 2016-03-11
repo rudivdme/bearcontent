@@ -36,4 +36,9 @@ return [
 			'description' => 'Full width page without feature image',
 		],
 	],
+
+	'page_entities' => [
+		'home'    => 'Landing Pages',
+		'content' => 'Content Pages',
+	],
 ];
