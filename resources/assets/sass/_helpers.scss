@@ -70,6 +70,7 @@
 .w400 { width: 400px !important; }
 .w450 { width: 450px !important; }
 
+.w50p { width: 50% !important; }
 .w100p { width: 100% !important; }
 
 .max1200 { max-width: 1200px; margin: 0 auto; }
@@ -157,4 +158,10 @@
 }
 .left-align {
 	text-align: left !important;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
 }

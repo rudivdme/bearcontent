@@ -106,8 +106,16 @@ input[type=text],  input[type=email], input[type=password], textarea, input[type
     background-color: rgb(80, 80, 80);
     border-radius: 5px;
     z-index: 30000;
+    li {
+      min-height: 35px;
+      line-height: 35px;
+    }
+    li.divider {
+      min-height: 1px;
+    }
     li > a {
       color: #ddd;
+      padding: 8px 16px;
     }
     li:hover {
       background-color: rgb(90, 90, 90);
@@ -115,6 +123,36 @@ input[type=text],  input[type=email], input[type=password], textarea, input[type
     li.active {
       background-color: rgb(100, 100, 100);
     }
+    .dropdown-header {
+      padding: 8px 16px 1px 16px;
+      border-bottom: 1px dotted #777;
+      color: #ddd;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.btn-form
+{
+  border: none;
+  border-radius: 5px;
+  margin: 0;
+  background: rgba(80, 80, 80, 0.7);
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #aaa;
+  outline: none;
+  font-family: 'Roboto Slab', serif;
+  text-align: left;
+
+
+  &.active {
+    color: #ddd;
+  }
+
+  &:hover {
+    background: #656565;
   }
 }
 
@@ -145,6 +183,10 @@ input[type=text],  input[type=email], input[type=password], textarea, input[type
   margin: 0;
   background: rgba(80, 80, 80, 0.7);
   padding: 10px 15px 3px 15px;
+}
+
+.btn-form {
+
 }
 
 

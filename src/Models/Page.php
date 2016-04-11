@@ -220,8 +220,8 @@ class Page extends Model
                 case 'special':
                     $query->where('entity', '!=', 'content' ); break;
 
-                case 'content':
-                    $query->where('entity', '=', 'content' ); break;
+                default:
+                    $query->where('entity', '=', request('filters.entity') ); break;
             }
 
         }
