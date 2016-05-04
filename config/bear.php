@@ -41,4 +41,10 @@ return [
 		'home'    => 'Landing Pages',
 		'content' => 'Content Pages',
 	],
+
+	'content_models' => [
+		'section' => Rudivdme\BearContent\Models\PageSection::class,
+		'widget'  => Rudivdme\BearContent\Models\PageWidget::class,
+		'page'    => Rudivdme\BearContent\Models\Page::class,
+	],
 ];

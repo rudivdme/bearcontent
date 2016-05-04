@@ -221,7 +221,13 @@
 
     BearContent.UI.appendControl(function(parent) {
 
-        parent.find('.datepicker').pickadate();
+        parent.find('.datepicker').each(function() {
+            if (typeof $(this).data('datepicker') == 'undefined')
+            {
+                new Pikaday({ field: $(this)[0], theme: 'bear-theme', format: 'MMM D YYYY', });
+                $(this).data('datepicker', true);
+            }
+        });
 
     });
 

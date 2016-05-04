@@ -35,15 +35,10 @@ class SaveController extends ApiController
                 $type = $arr[0];
                 $id = $arr[1];
 
-                switch($type)
-                {
-                    case 'section':
-                        $record = PageSection::where('id', '=', $id)->first(); break;
-                    case 'widget':
-                        $record = PageWidget::where('id', '=', $id)->first(); break;
-                    case 'page':
-                        $record = Page::where('id', '=', $id)->first(); break;
-                }
+                $class = config("bear.content_models.$type");
+
+                $record = $class::where('id', '=', $id)->first();
+
                 if (!empty($record)) {
                     $record->fill(['content' => $content])->save();
                 }

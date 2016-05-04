@@ -99,7 +99,6 @@ class Page extends Model
     {
         $this->fill( $request->all() );
         $this->status = 'draft';
-        $this->entity = 'content';
         if ($request->input('private') == 'true')
         {
             $this->private = true;

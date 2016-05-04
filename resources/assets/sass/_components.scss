@@ -206,3 +206,52 @@
 			}
 		}
 	}
+
+	[data-removable-container] {
+		[data-removing-hide] {
+			display: block;
+		}
+		[data-removing-show] {
+			display: none;
+		}
+
+		&[data-removing] {
+			[data-removing-hide] {
+				display: none;
+			}
+			[data-removing-show] {
+				display: block;
+			}
+			[data-removable]
+			{
+				cursor: pointer;
+				position: relative;
+				-webkit-transition-duration: 0.3s;
+			    -moz-transition-duration: 0.3s;
+			    transition-duration: 0.3s;
+			    -webkit-transition-timing-function: ease-in;
+			    -moz-transition-timing-function: ease-in;
+			    transition-timing-function: ease-in;
+
+				.check-icon {
+					position: absolute;
+					top: 20px;
+					left: 20px;
+					color: #fff;
+					opacity: 0.4;
+					font-size: 34px;
+					line-height: 34px;
+					display: block;
+				}
+
+				&.checked {
+					border: 15px  solid $themeRed;
+
+					.check-icon {
+						opacity: 1;
+						color: $themeRed;
+					}
+				}
+			}
+		}
+	}

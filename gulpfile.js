@@ -42,6 +42,8 @@ elixir(function(mix) {
         '../../../bower_components/sweetalert/dist/sweetalert.min.js',
         '../../../bower_components/fancybox/source/jquery.fancybox.js',
         '../../../bower_components/fancybox/source/helpers/jquery.fancybox-media.js',
+        '../../../bower_components/moment/min/moment.min.js',
+        '../../../bower_components/pikaday/pikaday.js',
         '../scripts/ba.functions.js',
         '../scripts/ba.app.js',
         '../scripts/ba.api.js',
