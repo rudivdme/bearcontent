@@ -7003,13 +7003,13 @@
   #bear-container .p20 {
     padding: 20px; }
   #bear-container .ml8 {
-    margin-left: 8px; }
+    margin-left: 8px !important; }
   #bear-container .mr8 {
-    margin-right: 8px; }
+    margin-right: 8px !important; }
   #bear-container .mb8 {
-    margin-bottom: 8px; }
+    margin-bottom: 8px !important; }
   #bear-container .mt8 {
-    margin-top: 8px; }
+    margin-top: 8px !important; }
   #bear-container .mt0 {
     margin-top: 0 !important; }
   #bear-container .mb0 {

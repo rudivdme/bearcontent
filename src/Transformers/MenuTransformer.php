@@ -75,7 +75,7 @@ class MenuTransformer extends Transformer {
 			'slug'        => $slug,
 			'http'        => $url,
 			'page_layout' => $layout,
-			'current'     => request()->url() == $url ? '1' : '0',
+			'current'     => request()->url() == url($url) ? '1' : '0',
 			'children'    => $item->children,
 		];
 	}
