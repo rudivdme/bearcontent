@@ -32,7 +32,7 @@
 		});
 
 		Route::get('admin', function() {
-			return redirect('/')->withCookie(cookie()->forever('has-bear', true));
+			return redirect('/#!/signin')->withCookie(cookie()->forever('has-bear', true));
 		});
 
 		Route::get('exit', function() {
