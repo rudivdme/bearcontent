@@ -35738,8 +35738,6 @@ function isNumeric(n) {
     {
         var self = BearContent.UI;
 
-        console.log(elem);
-
         try
         {
             if (response.result)
@@ -35859,6 +35857,8 @@ function isNumeric(n) {
                         route(path);
                     }
                 }
+
+                console.log(form);
 
                 if (typeof form != 'undefined' && typeof form.attr('data-encourage-refresh') != 'undefined')
                 {

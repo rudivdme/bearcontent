@@ -131,8 +131,6 @@
     {
         var self = BearContent.UI;
 
-        console.log(elem);
-
         try
         {
             if (response.result)
@@ -252,6 +250,8 @@
                         route(path);
                     }
                 }
+
+                console.log(form);
 
                 if (typeof form != 'undefined' && typeof form.attr('data-encourage-refresh') != 'undefined')
                 {
