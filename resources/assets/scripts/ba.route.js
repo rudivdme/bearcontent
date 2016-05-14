@@ -12,21 +12,25 @@
 
 			route("/*", function(collection) {
 				self.loadRoute(collection);
+				self.currentRoute = collection;
 			});
 
 			route("/*/*", function(collection, id) {
 				if (isNumeric(id))
 				{
 					self.loadRoute(collection, id);
+					self.currentRoute = collection + '/' + id;
 				}
 				else
 				{
 					self.loadRoute(collection+'/'+id);
+					self.currentRoute = collection+'/'+id;
 				}
 			});
 
 			route("/*/*/*", function(collection, id, action) {
 				self.loadRoute(collection+'/'+action, id);
+				self.currentRoute = collection+'/'+id+'/'+action;
 			});
 
 			self.pageTitle = document.title;
@@ -81,17 +85,17 @@
 
 				var title = routeTemplate.attr('data-route-title');
 
-				console.log(path);
-				console.log(store);
-				console.log(loadStore);
-
 				this.setTitle(title);
 
 				BearContent.UI.update(function() {
 					BearContent.Data.update();
 				});
 			}
-		}
+		},
+
+		isCurrent: function(path) {
+			return this.currentRoute == path;
+		},
 
 	};
 

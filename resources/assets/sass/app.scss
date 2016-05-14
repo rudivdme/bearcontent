@@ -50,3 +50,17 @@ body.has-bear-overlay {
 .ct-tool {
 	&--heading3:before        { content: "H3"; font-weight: normal; font-family: Arial, sans-serif; font-size: 14px; }
 }
+.lean-overlay {
+    position: fixed;
+    z-index:999;
+    top: -100px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 125%;
+    width: 100%;
+    background: #000;
+    display: none;
+
+    will-change: opacity;
+}

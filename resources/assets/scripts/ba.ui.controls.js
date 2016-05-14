@@ -210,7 +210,7 @@
 
     BearContent.UI.appendControl(function(parent) {
 
-        parent.find('[show-modal]').leanModal({
+        parent.find('[data-show-modal]').leanModal({
             dismissible: true,
             opacity: .5,
             in_duration: 300,

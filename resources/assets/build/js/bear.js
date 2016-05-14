@@ -35375,21 +35375,25 @@ function isNumeric(n) {
 
 			route("/*", function(collection) {
 				self.loadRoute(collection);
+				self.currentRoute = collection;
 			});
 
 			route("/*/*", function(collection, id) {
 				if (isNumeric(id))
 				{
 					self.loadRoute(collection, id);
+					self.currentRoute = collection + '/' + id;
 				}
 				else
 				{
 					self.loadRoute(collection+'/'+id);
+					self.currentRoute = collection+'/'+id;
 				}
 			});
 
 			route("/*/*/*", function(collection, id, action) {
 				self.loadRoute(collection+'/'+action, id);
+				self.currentRoute = collection+'/'+id+'/'+action;
 			});
 
 			self.pageTitle = document.title;
@@ -35444,17 +35448,17 @@ function isNumeric(n) {
 
 				var title = routeTemplate.attr('data-route-title');
 
-				console.log(path);
-				console.log(store);
-				console.log(loadStore);
-
 				this.setTitle(title);
 
 				BearContent.UI.update(function() {
 					BearContent.Data.update();
 				});
 			}
-		}
+		},
+
+		isCurrent: function(path) {
+			return this.currentRoute == path;
+		},
 
 	};
 
@@ -35734,6 +35738,8 @@ function isNumeric(n) {
     {
         var self = BearContent.UI;
 
+        console.log(elem);
+
         try
         {
             if (response.result)
@@ -35764,7 +35770,14 @@ function isNumeric(n) {
                         path = path.replace('{id}', response.record.id);
                     }
 
-                    route(path);
+                    if (BearContent.Route.isCurrent(path))
+                    {
+                        BearContent.Data.update();
+                    }
+                    else
+                    {
+                        route(path);
+                    }
                 }
 
                 if (typeof elem != 'undefined' && typeof elem.attr('data-encourage-refresh') != 'undefined')
@@ -35829,13 +35842,22 @@ function isNumeric(n) {
                 if (typeof form != 'undefined' && typeof form.attr('data-done-route') != 'undefined')
                 {
                     var path = form.attr('data-done-route');
+                    var orig = form.attr('data-done-route');
+                    orig = orig.replace('/{id}', '');
 
                     if (typeof response.record != 'undefined')
                     {
                         path = path.replace('{id}', response.record.id);
                     }
 
-                    route(path);
+                    if (BearContent.Route.isCurrent(orig))
+                    {
+                        BearContent.Data.update();
+                    }
+                    else
+                    {
+                        route(path);
+                    }
                 }
 
                 if (typeof form != 'undefined' && typeof form.attr('data-encourage-refresh') != 'undefined')
@@ -35934,7 +35956,7 @@ function isNumeric(n) {
     showNotification: function(type, message, callback) {
         var self = this;
 
-        BearContent.toast(message, 10000, type)
+        BearContent.toast(message, 10000, type);
     },
 
   };
@@ -36152,7 +36174,7 @@ function isNumeric(n) {
 
     BearContent.UI.appendControl(function(parent) {
 
-        parent.find('[show-modal]').leanModal({
+        parent.find('[data-show-modal]').leanModal({
             dismissible: true,
             opacity: .5,
             in_duration: 300,

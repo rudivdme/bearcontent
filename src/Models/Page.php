@@ -226,7 +226,7 @@ class Page extends Model
         }
         else
         {
-            $query->where('entity', '=', 'content');
+            //$query->where('entity', '=', 'content');
         }
 
         if (request()->has('filters.per_page')) {
@@ -247,7 +247,7 @@ class Page extends Model
         }
         else
         {
-            $return->filters = ['sort' => 'created', 'order' => 'desc', 'search' => '', 'entity' => 'content'];
+            $return->filters = ['sort' => 'created', 'order' => 'desc', 'search' => '', 'entity' => 'all'];
         }
 
         return $return;

@@ -131,6 +131,8 @@
     {
         var self = BearContent.UI;
 
+        console.log(elem);
+
         try
         {
             if (response.result)
@@ -161,7 +163,14 @@
                         path = path.replace('{id}', response.record.id);
                     }
 
-                    route(path);
+                    if (BearContent.Route.isCurrent(path))
+                    {
+                        BearContent.Data.update();
+                    }
+                    else
+                    {
+                        route(path);
+                    }
                 }
 
                 if (typeof elem != 'undefined' && typeof elem.attr('data-encourage-refresh') != 'undefined')
@@ -226,13 +235,22 @@
                 if (typeof form != 'undefined' && typeof form.attr('data-done-route') != 'undefined')
                 {
                     var path = form.attr('data-done-route');
+                    var orig = form.attr('data-done-route');
+                    orig = orig.replace('/{id}', '');
 
                     if (typeof response.record != 'undefined')
                     {
                         path = path.replace('{id}', response.record.id);
                     }
 
-                    route(path);
+                    if (BearContent.Route.isCurrent(orig))
+                    {
+                        BearContent.Data.update();
+                    }
+                    else
+                    {
+                        route(path);
+                    }
                 }
 
                 if (typeof form != 'undefined' && typeof form.attr('data-encourage-refresh') != 'undefined')
@@ -331,7 +349,7 @@
     showNotification: function(type, message, callback) {
         var self = this;
 
-        BearContent.toast(message, 10000, type)
+        BearContent.toast(message, 10000, type);
     },
 
   };

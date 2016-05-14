@@ -33,7 +33,7 @@
 				            <ol class="dd-list" id="pendingList" data-ix="1">
 				            	{{#each pages}}
 					                <li class="dd-item" data-list="#menuList" data-id="new-{{id}}" data-page-id="{{id}}" data-title="{{title}}" data-url="{{url}}" data-active="true">
-								        <button type="button" class="btn default pull-right dd-control" show-modal data-target="FormMenu{{id}}"><i class="fa fa-pencil"></i></button>
+								        <button type="button" class="btn default pull-right dd-control" data-show-modal data-target="FormMenu{{id}}"><i class="fa fa-pencil"></i></button>
 							            <div class="dd-handle">
 							            	<div class="dd-title"><span data-field-{{id}}-title>{{title}}</span> 
 							            		{{#compare active '0'}}<small>(not active)</small>{{/compare}}
@@ -44,7 +44,7 @@
 								{{/each}}
 				            </ol>
 				            <hr class="subtle" />
-				            <button type="button" class="dd-new" show-modal data-target="FormMenuNew"><i class="fa fa-plus"></i> Create New</button>
+				            <button type="button" class="dd-new" data-show-modal data-target="FormMenuNew"><i class="fa fa-plus"></i> Create New</button>
 							<div id="FormMenuNew" class="modal max450" data-store="beardata.menu"  data-target="#pendingList">
 								<div class="modal-content">
 									<div class="popover-form menu-item-form">
@@ -119,7 +119,7 @@
 
 <script id="menu-item-template" type="text/x-handlebars-template">
 	<li class="dd-item" data-list="#menuList" data-id="{{id}}" data-page-id="{{page_id}}" data-title="{{title}}" data-url="{{url}}" data-active="{{active}}">
-    	<button type="button" class="btn default pull-right dd-control" show-modal data-target="FormMenu{{id}}"><i class="fa fa-pencil"></i></button>
+    	<button type="button" class="btn default pull-right dd-control" data-show-modal data-target="FormMenu{{id}}"><i class="fa fa-pencil"></i></button>
         <div class="dd-handle">
         	<div class="dd-title"><span data-field-{{id}}-title>{{title}}</span> 
         		{{#compare active '0'}}<small>(not active)</small>{{/compare}}
