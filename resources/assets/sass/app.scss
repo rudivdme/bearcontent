@@ -9,6 +9,17 @@ $themeRed: 		#f44336;
 // Variables;
 @import "bower_components/Materialize/sass/components/variables";
 
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?skqrwq');
+    src:    url('../fonts/icomoon.eot?skqrwq#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?skqrwq') format('truetype'),
+        url('../fonts/icomoon.woff?skqrwq') format('woff'),
+        url('../fonts/icomoon.svg?skqrwq#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #bear-container
 {
 	@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
@@ -50,6 +61,23 @@ body.has-bear-overlay {
 .ct-tool {
 	&--heading3:before        { content: "H3"; font-weight: normal; font-family: Arial, sans-serif; font-size: 14px; }
 }
+.ct-tool {
+	&--align-justify:before   { 
+		font-family: 'icomoon' !important;
+	    speak: none;
+	    font-style: normal;
+	    font-weight: normal;
+	    font-variant: normal;
+	    text-transform: none;
+	    line-height: 1;
+
+	    /* Better Font Rendering =========== */
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    content: "\e906";
+	}
+}
+
 .lean-overlay {
     position: fixed;
     z-index:999;

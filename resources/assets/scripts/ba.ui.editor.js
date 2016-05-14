@@ -424,11 +424,84 @@
 
     })(ContentTools.Tool);
 
+    ContentTools.Tools.AlignLeft = (function(_super) {
+    __extends(AlignLeft, _super);
+
+    function AlignLeft() {
+      return AlignLeft.__super__.constructor.apply(this, arguments);
+    }
+
+    ContentTools.ToolShelf.stow(AlignLeft, 'align-left');
+
+    AlignLeft.label = 'Align left';
+
+    AlignLeft.icon = 'align-left';
+
+    AlignLeft.className = 'text-left';
+
+    AlignLeft.canApply = function(element, selection) {
+      return element.content !== void 0;
+    };
+
+    AlignLeft.isApplied = function(element, selection) {
+      var _ref;
+      if (!this.canApply(element)) {
+        return false;
+      }
+      if ((_ref = element.type()) === 'ListItemText' || _ref === 'TableCellText') {
+        element = element.parent();
+      }
+      return element.hasCSSClass(this.className);
+    };
+
+    AlignLeft.apply = function(element, selection, callback) {
+      var className, _i, _len, _ref, _ref1;
+      if ((_ref = element.type()) === 'ListItemText' || _ref === 'TableCellText') {
+        element = element.parent();
+      }
+      _ref1 = ['text-center', 'text-left', 'text-right', 'text-justify'];
+      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+        className = _ref1[_i];
+        if (element.hasCSSClass(className)) {
+          element.removeCSSClass(className);
+          if (className === this.className) {
+            return callback(true);
+          }
+        }
+      }
+      element.addCSSClass(this.className);
+      return callback(true);
+    };
+
+    return AlignLeft;
+
+  })(ContentTools.Tool);
+
+    ContentTools.Tools.AlignJustify = (function(_super) {
+        __extends(AlignJustify, _super);
+
+        function AlignJustify() {
+          return AlignJustify.__super__.constructor.apply(this, arguments);
+        }
+
+        ContentTools.ToolShelf.stow(AlignJustify, 'align-justify');
+
+        AlignJustify.label = 'Justify Text';
+
+        AlignJustify.icon = 'align-justify';
+
+        AlignJustify.className = 'text-justify';
+
+        return AlignJustify;
+
+      })(ContentTools.Tools.AlignLeft);
+
     ContentTools.DEFAULT_TOOLS[1].remove('heading');
     ContentTools.DEFAULT_TOOLS[1].remove('subheading');
 
     ContentTools.DEFAULT_TOOLS[1].unshift('heading3');
     ContentTools.DEFAULT_TOOLS[1].unshift('heading2');
     ContentTools.DEFAULT_TOOLS[1].unshift('heading1');
+    ContentTools.DEFAULT_TOOLS[1].unshift('align-justify');
 
 }).call(this);
