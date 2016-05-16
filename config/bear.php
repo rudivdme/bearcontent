@@ -47,4 +47,6 @@ return [
 		'widget'  => Rudivdme\BearContent\Models\PageWidget::class,
 		'page'    => Rudivdme\BearContent\Models\Page::class,
 	],
+
+	'enable_page_routes' => true,
 ];

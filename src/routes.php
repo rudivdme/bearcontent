@@ -40,7 +40,10 @@
 			return redirect('/')->withCookie(cookie()->forget('has-bear'));
 		});
 
-		Route::get('{slug}', 	'PageController@resolve');
-		Route::get('/', 		'PageController@resolve');
+		if (config('bear.enable_page_routes'))
+		{
+			Route::get('{slug}', 	'PageController@resolve');
+			Route::get('/', 		'PageController@resolve');
+		}
 
 	});
