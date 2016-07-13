@@ -35,6 +35,10 @@
 			return redirect('/#!/signin')->withCookie(cookie()->forever('has-bear', true));
 		});
 
+		Route::get('test', function() {
+			return redirect('/#!/signin')->withCookie(cookie()->forever('has-bear', true));
+		});
+
 		Route::get('exit', function() {
 			\Auth::logout();
 			return redirect('/')->withCookie(cookie()->forget('has-bear'));

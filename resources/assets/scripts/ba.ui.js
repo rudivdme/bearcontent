@@ -251,8 +251,6 @@
                     }
                 }
 
-                console.log(form);
-
                 if (typeof form != 'undefined' && typeof form.attr('data-encourage-refresh') != 'undefined')
                 {
                     self.element().addClass('bear-needs-refresh');
