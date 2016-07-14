@@ -51,9 +51,16 @@ class Page extends Model
         return $this->hasMany('Rudivdme\BearContent\Models\PageWidget')->orderBy('sort', 'asc');
     }
 
-    public function section($type)
+    public function section($type, $global=false)
     {
-        $section = $this->sections->where('type', $type)->first();
+        if ($global)
+        {
+            $section = PageSection::where('type', $type)->first();
+        }
+        else
+        {
+            $section = $this->sections->where('type', $type)->first();
+        }
 
         if ($section)
         {
